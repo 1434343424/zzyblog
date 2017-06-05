@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册</title>
+    <meta name="description" content="Ethanol is an Agency and Personal Portfolio Template built with bootstrap 3.3.2. This is created for a cause to support my uncle's campaign. Go and Donate at - https://life.indiegogo.com/fundraisers/medical-support-for-a-filipino-overseas-worker--3/x/10058181">
+    <meta name="keywords" content="portfolio, agency, bootstrap theme, mobile responsive, template, personal">
+    <meta name="author" content="ThemeForces.Com">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Nivo Lightbox
+    ================================================== -->
+    <link rel="stylesheet" href="css/nivo-lightbox.css" >
+    <link rel="stylesheet" href="css/nivo_lightbox_themes/default/default.css">
+
+    <!-- Slider
+    ================================================== -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <!-- Google Fonts
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: whitesmoke">
+
+<!-- Main Navigation
+================================================== -->
+<nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="..."></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/" class="scroll">首页</a></li>
+                <li><a href="#tf-services" class="scroll">Services</a></li>
+                <li><a href="/tags" class="scroll">标签</a></li>
+                <li><a href="#tf-works" class="scroll">Works</a></li>
+                <li><a href="/search" class="scroll">自己</a></li>
+                <li><a href="/archive" class="scroll">存档</a></li>
+                <li><a href="/wenzhang" class="scroll">文章BLOG</a></li>
+                <% if(user) { %>
+                <li><a href="/post" class="glyphicon glyphicon-plus">发表</a></li>
+                <li><a href="/upload" class="glyphicon glyphicon-plus">上传</a></li>
+                <li><a href="/logout" class="glyphicon  glyphicon-minus">退出</a></li>
+                <%  } else { %>
+                <li><a href="/login" title="登录">登录</a></li>
+                <li> <a href="/reg" class="glyphicon  glyphicon-plus">注册</a></li>
+                <% } %>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Page Header
+================================================== -->
+<div id="tf-header">
+    <div class="container"> <!-- container -->
+        <h1>注册页面</h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active">reg</a></li>
+        </ol>
+    </div><!-- end container -->
+</div>
+
+<!-- Contact Section
+================================================== -->
+<div id="tf-contact" class="contact">
+
+    <div class="container"> <!-- container -->
+        <div class="section-header">
+            <h2>快 速 注 册 一 个 帐 号 吧 ！<span class="highlight"><strong>Join Us</strong></span></h2>
+            <h5><em>We are meant to discover beautiful things</em></h5>
+            <div class="fancy"><span><img src="img/favicon.ico" alt="..."></span></div>
+        </div>
+
+        <!--这里是提示框-->
+        <article style="position: absolute;width:23%;text-align: center;margin-top: 370px;margin-left:132px;z-index: 999;background-color:">
+            <% if (success) { %>
+            <div style="width: 100%;height: 50px;background-color: green;border-radius: 5px;font-size: 24px;text-align: center;line-height: 50px;margin: 0 auto;"><%= success %></div>
+            <% } %>
+            <% if (error) { %>
+            <div style="width: 100%;height:40px;background-color:orangered;border-radius: 5px;font-size: 20px;text-align: center;line-height: 50px;margin: 0 auto;color:black"><%= error %> </div>
+            <% } %>
+        </article>
+
+        <div class="row text-center"> <!-- contact form outer row with centered text-->
+
+            <div class="col-md-5 col-md-offset-1">
+                <form method="post" class="form"> <!-- form wrapper -->
+                    <div class="form-group"> <!--帐号 -->
+                        <input type="text" name="name"  placeholder="Name *" class="reginput"></br>
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="form-group"> <!--密码-->
+                        <input type="password" name="password"   placeholder="Password *"></br>
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="form-group"> <!-- 确认密码 -->
+                        <input type="password" name="password-repeat"  placeholder="Again Password *"></br>
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="form-group"> <!-- 邮箱 -->
+                        <input type="email" name="email"  placeholder="email *"><br>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                <input type="submit" value="注册" class="btn btn-primary tf-btn color" style="margin-left:10px;"><!-- Send button -->
+                    </form>
+
+            </div>
+
+            <div class="col-md-5">
+                <div style="margin-left:50px;margin-top:-50px;"><img src="imgs/10.jpg" alt="" style="height:450px;width:450px;"></div>  <!-- google map -->
+            </div>
+
+        </div> <!-- end contact form outer row with centered text-->
+
+        <div class="row"> <!-- outer row -->
+            <div class="col-md-10 col-md-offset-1"> <!-- col 10 with offset 1 to centered -->
+                <div class="row"> <!-- nested row -->
+
+                    <!-- contact detail using col 4 -->
+                    <div class="col-md-4">
+                        <div class="contact-detail">
+                            <i class="fa fa-map-marker"></i>
+                            <h4>中国</h4> <!-- address -->
+                        </div>
+                    </div>
+                    <!-- contact detail using col 4 -->
+                    <div class="col-md-4">
+                        <div class="contact-detail">
+                            <i class="fa fa-envelope-o"></i>
+                            <h4>1434343424@qq.com</h4><!-- email add -->
+                        </div>
+                    </div>
+
+                    <!-- contact detail using col 4 -->
+                    <div class="col-md-4">
+                        <div class="contact-detail">
+                            <i class="fa fa-phone"></i>
+                            <h4>15238907980</h4> <!-- phone no. -->
+                        </div>
+                    </div>
+
+                </div> <!-- end nested row -->
+            </div> <!-- end col 10 with offset 1 to centered -->
+        </div><!-- end outer row -->
+
+    </div><!-- end container -->
+
+</div>
+
+<!-- Footer
+================================================== -->
+<div id="tf-footer">
+    <div class="container"><!-- container -->
+        <p class="pull-left">© Welcome to my home !</p> <!-- copyright text here-->
+        <ul class="list-inline social pull-right">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li> <!-- Change # With your FB Link -->
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li> <!-- Change # With your Twitter Link -->
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li> <!-- Change # With your Google Plus Link -->
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li> <!-- Change # With your Dribbble Link -->
+            <li><a href="#"><i class="fa fa-behance"></i></a></li> <!-- Change # With your Behance Link -->
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li> <!-- Change # With your LinkedIn Link -->
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li> <!-- Change # With your Youtube Link -->
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li> <!-- Change # With your Pinterest Link -->
+        </ul>
+    </div><!-- end container -->
+</div>
+
+

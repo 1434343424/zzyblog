@@ -1,0 +1,13 @@
+
+<div id="tag">
+<ul class="archive">
+    <div>
+        详细信息
+    </div>
+    <% posts.forEach(function(post,index){ %>
+    <li>日期：<%= post.time.day %></li>
+    <li>关键词：<a href="/u/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>"><%= post.title %></a></li>
+    <% }) %>
+</ul>
+</div>
+<% include footer %>
